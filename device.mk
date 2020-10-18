@@ -33,9 +33,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=log
 
-# test
-
-# test2
 
 # Display
 PRODUCT_PACKAGES += \
