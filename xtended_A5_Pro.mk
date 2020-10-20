@@ -15,6 +15,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit from UMIDIGI A5 Pro device
 $(call inherit-product, device/UMIDIGI/A5_Pro/device.mk)
+$(call inherit-product, vendor/xtras/xtras.mk)
 
 # Inherit some common Xtended stuff.
 $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
