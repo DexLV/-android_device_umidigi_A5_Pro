@@ -43,6 +43,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder \
+
+
 # Init cripts
 PRODUCT_PACKAGES += \
     fstab.enableswap \
