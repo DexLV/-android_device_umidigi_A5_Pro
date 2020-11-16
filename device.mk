@@ -57,8 +57,8 @@ PRODUCT_PACKAGES += \
     init.safailnet.rc
 
 #Symbols
-PRODUCT_PACKAGES += \
-    libshim_showlogo
+#PRODUCT_PACKAGES += \
+#    libshim_showlogo
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
