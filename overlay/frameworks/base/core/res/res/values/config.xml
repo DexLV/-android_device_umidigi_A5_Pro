@@ -526,6 +526,9 @@
     manually by the user. Off by default, since the expected haptic feedback may not be available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
+    <!-- Whether device uses linear screen brightness slider -->
+    <bool name="config_linearBrightnessSlider">true</bool>
+
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_enableSmartPixels">true</bool>
 

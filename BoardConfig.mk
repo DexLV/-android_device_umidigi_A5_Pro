@@ -30,7 +30,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
-TARGET_USES_64_BIT_BINDER := true
+#Useless in a11
+#TARGET_USES_64_BIT_BINDER := true
+TARGET_NO_KERNEL := false
 
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
@@ -55,8 +57,10 @@ TARGET_NO_BOOTLOADER := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Symbols
-# TARGET_LD_SHIM_LIBS := /system/lib/libshowlogo.so|libshim_showlogo.so
+# Build hax
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
+TARGET_OTA_ALLOW_NON_AB := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
@@ -75,6 +79,7 @@ BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Netd
 BUILD_BROKEN_DUP_RULES := true
