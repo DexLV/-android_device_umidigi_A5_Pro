@@ -87,7 +87,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/libcam.halsensor.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcam.halsensor.so \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/libcameracustom.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcameracustom.so \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/libmtk-ril.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtk-ril.so \
-    $(LOCAL_PATH)/halium-overlay/vendor/lib64/libmtkcam_metastore.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkcam_metastore.so
+    $(LOCAL_PATH)/halium-overlay/vendor/lib64/libmtkcam_metastore.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkcam_metastore.so \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
