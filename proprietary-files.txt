@@ -950,3 +950,9 @@ vendor/res/sound/CADetected.ogg
 vendor/thh/ta/0401c03fc30c4dd00000000000000104.ta
 vendor/thh/ta/TAs_list
 
+# EngineerMode 
+-product/priv-app/EngineerMode.apk
+lib/libem_support_jni.so|8a9eb1aa68e100f95d79a2fbbd54416ae34a917f
+lib64/libem_support_jni.so|480af237ff4df7ec627caf95488340a8b12dd181
+
+
