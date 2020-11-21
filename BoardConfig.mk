@@ -118,6 +118,9 @@ PRODUCT_SOONG_NAMESPACES += vendor/UMIDIGI/A5_Pro
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-10-05
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
 # Treble
 BOARD_VNDK_VERSION := current
 
