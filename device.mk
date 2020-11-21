@@ -57,7 +57,7 @@ PRODUCT_PACKAGES += \
     fstab.enableswap \
     init.mt6763.rc \
     fstab.mt6763 \
-    init.safailnet.rc
+    ueventd.mtk.rc
 
 #Symbols
 # PRODUCT_PACKAGES += \
