@@ -32,8 +32,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
-    $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/audio/misound_res.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res.bin
+    $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -214,6 +213,7 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(LOCAL_PATH)/halium-overlay/vendor/lib/hw/audio.primary.mt6763.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/audio.primary.mt6763.so \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/hw/audio.primary.mt6763.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/hw/audio.primary.mt6763.so \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/libcam.halsensor.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcam.halsensor.so \
@@ -234,8 +234,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
-   $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
+# Sepolicy
+TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
+TARGET_HAS_FUSEBLK_SEPOLICY_ON_VENDOR := true
 
 # Telephony Jars
 PRODUCT_BOOT_JARS += \
