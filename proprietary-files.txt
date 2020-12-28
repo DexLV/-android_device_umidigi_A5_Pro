@@ -201,9 +201,7 @@ vendor/lib64/hw/hwcomposer.mt6763.so
 vendor/lib64/hw/memtrack.mt6763.so
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/vendor.sw.swfingerprint@1.0-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/init/init.fingerprint.rc
 vendor/etc/init/vendor.sw.swfingerprint@1.0-service.rc
 vendor/lib/hw/fingerprint.default.so
@@ -249,6 +247,9 @@ vendor/lib/egl/libGLES_mali.so
 vendor/lib/libOpenCL.so
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/libOpenCL.so
+
+# Kernel-Modules
+vendor/lib/modules/
 
 # Keymaster
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
@@ -443,7 +444,6 @@ vendor/lib64/vendor.mediatek.hardware.log@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
-vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
