@@ -1,0 +1,9 @@
+[
+  {
+    "remote"     : "github",
+    "repository" : "TheMalachite/android_device_mediatek_sepolicy",
+    "target_path": "device/mediatek/sepolicy",
+    "revision"   : "elle"
+  }
+]
+

@@ -89,6 +89,10 @@ ro.sys.usb.bicr=no
 # ro.camera.sound.forced=0
 # ro.audio.silent=0
 
+# Charger
+ro.charger.enable_suspend=true
+
+
 ro.zygote.preload.enable=0
 
 # Disable dirty region for Mali

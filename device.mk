@@ -20,6 +20,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 # A/B
 AB_OTA_UPDATER := false
 
+PRODUCT_PACKAGES += \
+    RcsService
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -54,10 +57,14 @@ PRODUCT_PACKAGES += \
     fstab.enableswap \
     init.mt6763.rc \
     fstab.mt6763 \
-    init.safailnet.rc
+    ueventd.mtk.rc
 
 #Symbols
+<<<<<<< HEAD
 #PRODUCT_PACKAGES += \
+=======
+# PRODUCT_PACKAGES += \
+>>>>>>> 85a3f23b60bdbd9b639f6b62dee05e00675560a8
 #    libshim_showlogo
 
 # Keylayouts
@@ -87,7 +94,22 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/libcam.halsensor.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcam.halsensor.so \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/libcameracustom.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcameracustom.so \
     $(LOCAL_PATH)/halium-overlay/vendor/lib64/libmtk-ril.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtk-ril.so \
-    $(LOCAL_PATH)/halium-overlay/vendor/lib64/libmtkcam_metastore.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkcam_metastore.so
+    $(LOCAL_PATH)/halium-overlay/vendor/lib64/libmtkcam_metastore.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkcam_metastore.so \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml \
+    $(LOCAL_PATH)/configs/audio/misound_res.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res.bin
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+
+
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -109,4 +131,4 @@ $(call inherit-product, vendor/UMIDIGI/A5_Pro/A5_Pro-vendor.mk)
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 28
-PRODUCT_EXTRA_VNDK_VERSIONS := 28
+PRODUCT_EXTRA_VNDK_VERSIONS := 29
