@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_A5_Pro.mk
+    $(LOCAL_DIR)/evolution_A5_Pro.mk
 
 PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/lineage_A5_Pro.mk
@@ -30,7 +30,7 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/crdroid_A5_Pro.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_A5_Pro-userdebug
+    evolution_A5_Pro-userdebug
 
 COMMON_LUNCH_CHOICES += \
     lineage_A5_Pro-userdebug

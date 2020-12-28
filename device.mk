@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/UMIDIGI/A5_Pro/A5_Pro-vendor.mk)
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_props.mk
@@ -57,8 +57,8 @@ PRODUCT_PACKAGES += \
     init.safailnet.rc
 
 #Symbols
-PRODUCT_PACKAGES += \
-    libshim_showlogo
+#PRODUCT_PACKAGES += \
+#    libshim_showlogo
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -93,6 +93,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-mediatek
 
+
+# Telephony Jars
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
+# Inherit vendor
+$(call inherit-product, vendor/UMIDIGI/A5_Pro/A5_Pro-vendor.mk)
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 28
