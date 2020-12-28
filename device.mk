@@ -201,6 +201,33 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    capture.sh \
+    capture_headsetmic.sh \
+    playback.sh \
+    playback_headset.sh \
+    setup_headset2rcv.sh \
+    setup_headsetmic2headphone.sh \
+    setup_mainmic2headphone.sh \
+    setup_topmic2headphone.sh \
+    teardown_loopback.sh \
+    init.aee.rc \
+    init.ago.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6763.rc \
+    init.mt6763.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    meta_init.connectivity.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
+    multi_init.rc \
+    fstab.mt6763 \
+    ueventd.mtk.rc
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
