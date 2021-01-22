@@ -11,22 +11,16 @@
     "target_path": "vendor/UMIDIGI/A5_Pro",
     "branch":      "master"
   },
-    {
-    "remote":      "github",
-    "repository":  "LineageOS/android_hardware_mediatek",
-    "target_path": "hardware/mediatek",
-    "branch":      "lineage-17.1"
-  },
-  {
-    "remote":      "github",
-    "repository":  "AgentFabulous/vendor_mediatek_hardware_telephony-ext",
-    "target_path": "vendor/mediatek/hardware/telephony-ext",
-    "branch":      "wip"
-  },
-  {
-    "remote":      "github",
-    "repository":  "PeterCxy/vendor_mediatek_hardware_interfaces",
-    "target_path": "vendor/mediatek/hardware/interfaces",
-    "branch":      "lineage-17.0"
-  }
+ {
+   "repository"  : "vendor_mediatek_ims",
+   "target_path" : "vendor/mediatek/ims",
+   "remote"      : "pixel",
+   "branch"      : "eleven"
+ },
+ {
+   "repository"  : "vendor_mediatek_interfaces",
+   "target_path" : "vendor/mediatek/interfaces",
+   "remote"      : "pixel",
+   "branch"      : "eleven"
+ }
 ]
