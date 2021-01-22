@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
-    <item name="ambient.on">0.1</item>
-    <item name="screen.on">102</item>
-    <item name="screen.full">134</item>
-    <item name="bluetooth.active">46</item>
-    <item name="bluetooth.on">5</item>
-    <item name="wifi.on">3</item>
-    <item name="wifi.active">465</item>
-    <item name="wifi.scan">62</item>
-    <item name="audio">24</item>
-    <item name="video">295</item>
-    <item name="camera.flashlight">200</item>
-    <item name="camera.avg">600</item>
-    <item name="gps.on">24</item>
-    <item name="radio.active">640</item>
-    <item name="radio.scanning">110</item>
+    <item name="none">0</item>
+    <item name="screen.on">49.98</item>
+    <item name="screen.full">289.51</item>
+    <item name="bluetooth.active">25.02</item>
+    <item name="bluetooth.on">2.03</item>
+    <item name="wifi.on">1.47</item>
+    <item name="wifi.active">167.39</item>
+    <item name="wifi.scan">24.79</item>
+    <item name="dsp.audio">16.14</item>
+    <item name="dsp.video">73.53</item>
+    <item name="camera.flashlight">0.1</item>
+    <item name="camera.avg">633.84</item>
+    <item name="gps.on">33.49</item>
+    <item name="radio.active">261.81</item>
+    <item name="radio.scanning">0.1</item>
     <array name="radio.on">
-        <value>5</value>
-        <value>5</value>
+        <value>7.68</value>
+        <value>7.68</value>
     </array>
     <array name="cpu.clusters.cores">
         <value>4</value>
@@ -116,11 +116,8 @@
     <item name="modem.controller.idle">0</item>
     <item name="modem.controller.rx">0</item>
     <array name="modem.controller.tx">
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
+        <value>6</value>
+        <value>2</value>
     </array>
     <item name="modem.controller.voltage">0</item>
     <array name="gps.signalqualitybased">

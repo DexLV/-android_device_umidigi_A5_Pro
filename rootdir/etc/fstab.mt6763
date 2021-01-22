@@ -6,11 +6,11 @@
 # Core Partitions
 /dev/block/platform/bootdevice/by-name/system     /system     ext4     ro                                                 wait,first_stage_mount
 /dev/block/platform/bootdevice/by-name/vendor     /vendor     ext4     ro                                                 wait,first_stage_mount
+/dev/block/by-name/metadata                       /metadata   ext4     noatime,nosuid,nodev,discard                       wait,formattable,first_stage_mount
 /dev/block/platform/bootdevice/by-name/userdata   /data       ext4     noatime,nosuid,nodev,noauto_da_alloc,errors=panic  latemount,wait,check,formattable,quota,reservedsize=128m,fileencryption=aes-256-xts
 /dev/block/platform/bootdevice/by-name/cache      /cache      ext4     noatime,nosuid,nodev,noauto_da_alloc,discard       wait,check,formattable
 /dev/block/platform/bootdevice/by-name/recovery   /recovery   emmc     defaults     first_stage_mount,nofail
 /dev/block/platform/bootdevice/by-name/boot       /boot       emmc     defaults     first_stage_mount,nofail
-/dev/block/platform/bootdevice/by-name/misc       /misc       emmc     defaults     defaults
 
 # External-Devices (SDCARD | OTG)
 /devices/platform/externdevice*                  auto       auto   defaults    voldmanaged=sdcard1:auto,encryptable=userdata
@@ -37,6 +37,10 @@
 /dev/block/platform/bootdevice/by-name/nvdata   /mnt/vendor/nvdata     ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc     wait,check,formattable
 /dev/block/platform/bootdevice/by-name/nvcfg    /mnt/vendor/nvcfg      ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc     wait,check,formattable
 
+# System Control Processor (SCP)
+/dev/block/platform/bootdevice/by-name/scp1     /scp1       emmc   defaults    defaults
+/dev/block/platform/bootdevice/by-name/scp2     /scp2       emmc   defaults    defaults
+
 # Subscriber Identification Module (SIM)
 /dev/block/platform/bootdevice/by-name/protect1 /mnt/vendor/protect_f   ext4   noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
 /dev/block/platform/bootdevice/by-name/protect2 /mnt/vendor/protect_s   ext4   noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc      wait,check,formattable
@@ -45,5 +49,10 @@
 /dev/block/platform/bootdevice/by-name/tee1     /tee1       emmc   defaults    defaults
 /dev/block/platform/bootdevice/by-name/tee2     /tee2       emmc   defaults    defaults
 
+# Vision Processing Unit (VPU)
+/dev/block/platform/bootdevice/by-name/cam_vpu1 /cam_vpu1   emmc   defaults    defaults
+/dev/block/platform/bootdevice/by-name/cam_vpu2 /cam_vpu2   emmc   defaults    defaults
+/dev/block/platform/bootdevice/by-name/cam_vpu3 /cam_vpu3   emmc   defaults    defaults
+
 # ZRAM - Compressed RAM based Block Device (SWAP)
-/dev/block/zram0                                none        swap   defaults    zramsize=2147483648,max_comp_streams=8
+/dev/block/zram0                                none        swap   defaults    zramsize=1073741824,max_comp_streams=8
