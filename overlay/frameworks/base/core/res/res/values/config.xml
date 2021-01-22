@@ -184,17 +184,8 @@
          flag is set for wifi displays. -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
 
-    <!-- Boolean indicating whether the wifi chipset has background scan support -->
-    <bool name="config_wifi_background_scan_support">true</bool>
-
     <!-- Wifi driver supports batched scan -->
     <bool name="config_wifi_batched_scan_supported">false</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-    <bool name="config_wifi_dual_band_support">true</bool>
-
-    <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
-    <bool name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">false</bool>
 
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
     <bool name="config_wifi_softap_acs_supported">false</bool>
@@ -218,12 +209,6 @@
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
     <integer name="config_shutdownBatteryTemperature">600</integer>
-
-    <!-- Integer parameters of the wifi to cellular handover feature wifi should not stick to bad networks -->
-    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-85</integer>
-    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-82</integer>
-    <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
-    <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
 
 
     <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
