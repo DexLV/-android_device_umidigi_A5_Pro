@@ -1,15 +1,22 @@
 # Audio
 ro.camera.sound.forced=0
 ro.audio.silent=0
+ro.vendor.audio.voice.volume.boost=manual
 
 # Brand
 Build.BRAND=MTK
+
+# Blur
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
 
 # Camera
 ro.camera.sensor.id_rear=0
 ro.camera.sensor.id_front=1
 ro.camera.highres.packagelist=org.lineageos.snap
-persist.vendor.camera.privapp.list=com.android.camera
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
+vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 
 # Display
 ro.opengles.version=196610
@@ -26,6 +33,9 @@ sys.ipo.disable=1
 
 # Kernel
 ro.kernel.zio=38,108,105,16
+
+# Misc
+ro.com.google.clientidbase=android-agold
 
 # Netflix
 ro.netflix.bsp_rev=MTK6785-18758-1
@@ -55,10 +65,8 @@ ro.charger.enable_suspend=true
 
 # WiFi
 wifi.interface=wlan0
-ro.mediatek.wlan.wsc=1
-ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
-wifi.tethering.interface=ap0
+
 wifi.direct.interface=p2p0
 ro.vendor.net.enable_dual_wifi=1
 
