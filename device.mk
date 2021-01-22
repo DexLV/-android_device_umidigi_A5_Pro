@@ -7,23 +7,37 @@
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/umidigi/A5_Pro/A5_Pro-vendor.mk)
+
 # AOT Preload
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# RCS
 PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
     RcsService
+
+# APN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
- libaacwrapper \
-    audio.bluetooth.default \
-    audio.r_submix.default \
-    audio.usb.default \
-    audio_policy.stub \
-    libtinycompress \
-    libtinycompress.vendor \
+    audio.a2dp.default
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
@@ -60,15 +74,12 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
     libvulkan
     
+# Features
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.controls.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.controls.xml
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -94,7 +105,11 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system
+    android.hidl.manager@1.0_system \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor
 
 # Input
 PRODUCT_COPY_FILES += \
