@@ -303,6 +303,7 @@ PRODUCT_COPY_FILES += \
 # Tethering
 PRODUCT_PACKAGES += \
     WifiOverlay \
+    TetheringConfigOverlay
 
 # Inherit vendor
 $(call inherit-product, vendor/UMIDIGI/A5_Pro/A5_Pro-vendor.mk)
