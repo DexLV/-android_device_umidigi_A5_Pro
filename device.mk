@@ -137,6 +137,9 @@ PRODUCT_PACKAGES += \
     libsuspend \
     android.hardware.health@2.0
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 28
 PRODUCT_EXTRA_VNDK_VERSIONS := 28
