@@ -23,7 +23,7 @@ key 228   POUND
 key 227   STAR
 key 231   CALL
 key 61    CALL
-key 232   DPAD_CENTER
+#key 232   DPAD_CENTER
 key 108   DPAD_DOWN
 key 103   DPAD_UP
 key 102   HOME
