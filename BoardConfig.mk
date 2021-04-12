@@ -46,6 +46,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
+# System Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # AVB (Android Verified Boot)
 BOARD_AVB_ENABLE := false
 

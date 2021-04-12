@@ -9,6 +9,9 @@ ro.config.ring_notification_vol_steps=15
 # Boot
 sys.vendor.shutdown.waittime=500
 
+# Charger
+ro.charger.enable_suspend=true
+
 # Brand
 Build.BRAND=MTK
 
@@ -16,10 +19,13 @@ Build.BRAND=MTK
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
 vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.pixelexperience.faceunlock
+persist.camera.HAL3.enabled=1
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
+ro.vendor.qti.am.reschedule_service=true
 dalvik.vm.image-dex2oat-filter=quicken 
+ro.sys.fw.dex2oat_thread_count=8
 dalvik.vm.image-dex2oat-threads=8 
 dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 
 dalvik.vm.dex2oat-filter=quicken 
@@ -57,10 +63,36 @@ ro.kernel.zio=38,108,105,16
 media.stagefright.thumbnail.prefer_hw_codecs=true
 debug.stagefright.ccodec=0
 
-# Perf
+# MTK Performance
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 ro.mtk_perf_simple_start_win=1
+
+# Graphics
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+
+# LMKD
+ro.lmk.low=1001 
+ro.lmk.medium=0 
+ro.lmk.critical=800  
+ro.lmk.critical_upgrade=false 
+ro.lmk.upgrade_pressure=100 
+ro.lmk.downgrade_pressure=100 
+ro.lmk.kill_heaviest_task=true 
+ro.lmk.kill_timeout_ms=15 
+ro.lmk.use_minfree_levels=true 
+ro.lmk.enhance_batch_kill=true 
+ro.lmk.vmpressure_file_min=80640 
+ro.lmk.log_stats=true 
+ro.lmk.use_psi=true 
+ro.lmk.psi_complete_stall_ms=200 
+ro.lmk.thrashing_limit=30 
+ro.lmk.swap_util_max=100
+
+# WFD
+persist.sys.wfd.nohdcp=1 
+persist.debug.wfd.enable=1 
+persist.sys.wfd.virtual=0
 
 # Power
 sys.ipo.pwrdncap=2
@@ -74,6 +106,16 @@ ro.sys.usb.bicr=no
 ro.sys.usb.charging.only=yes
 ro.sys.usb.mtp.whql.enable=0
 ro.sys.usb.storage.type=mtp
+persist.sys.usb.config=mtp,adb 
+ro.adb.secure=0 
+ro.secure=0 
+ro.debuggable=1
+
+# USB BICR function
+ro.sys.usb.bicr=no
+
+# USB Charge only function
+ro.sys.usb.charging.only=yes
 
 # WLAN
 mediatek.wlan.ctia=0
@@ -83,5 +125,11 @@ wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
 
+# Zram-writeback
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+persist.device_config.runtime_native.usap_pool_size_max=5
