@@ -28,7 +28,7 @@ PRODUCT_MANUFACTURER := UMIDIGI
 PRIVATE_BUILD_DESC="coral-user 10 QQ3A.200605.001 6392402 release-keys"
 
 # Fingerprint
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys"
+BUILD_FINGERPRINT := "google/sunfish/sunfish:11/RQ2A.210305.006/7119741:user/release-keys"
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
