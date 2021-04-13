@@ -30,7 +30,8 @@ applications that come with the platform
     </privapp-permissions>
 
     <privapp-permissions package="com.mediatek.ims">
-        <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
+        <permission name="android.permission.UPDATE_DEVICE_STATS" />    
+	<permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
         <permission name="android.permission.READ_NETWORK_USAGE_HISTORY"/>
         <permission name="android.permission.PACKET_KEEPALIVE_OFFLOAD"/>
         <permission name="android.permission.CHANGE_WIFI_STATE"/>
@@ -184,6 +185,11 @@ applications that come with the platform
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.mediatek.voiceunlock">
+        <permission name="android.permission.STATUS_BAR"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+
     <privapp-permissions package="com.android.phone">
         <permission name="com.mediatek.intent.action.ACTION_NETWORK_CHANGED"/>
         <permission name="com.mediatek.INTENT.IMS_STATE_CHANGED"/>
@@ -264,4 +270,17 @@ applications that come with the platform
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.mediatek.entitlement">
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    </privapp-permissions>
+
+    <!-- ifdef VENDOR_EDIT -->
+    <!-- Wensen.Luo@PSW.NW.REG.1607046, 2018/11/21 -->
+    <!-- add for rcsapp permission for CTS test  -->
+    <privapp-permissions package="com.nativeapp.rcsapp">
+        <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+        <permission name="android.permission.READ_LOGS"/>
+    </privapp-permissions>
+    <!-- endif VENDOR_EDIT -->
 </permissions>
