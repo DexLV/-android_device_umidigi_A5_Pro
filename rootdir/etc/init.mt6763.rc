@@ -40,6 +40,9 @@ on post-fs-data
     # Disable serial console for MTK (A11 notification)
     setprop init.svc.console stopped
 
+    # Audio Policy
+    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
+
 # Disable AOSP RIL if MTK RIL is up
 # on property:vendor.ril.mtk=1
 #    stop vendor.ril-daemon
