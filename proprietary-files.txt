@@ -25,7 +25,7 @@ lib/libshowlogo.so
 lib/libsysenv_system.so
 
 # RIL
-# vendor/lib64/libmtk-ril.so:lib64/libmtk-ril.so
+vendor/lib64/libmtk-ril.so:lib64/libmtk-ril.so
 
 # HotwordEnrollment - Begoniain QP1A.190711.020 V11.0.2.0.QGGINXM
 -product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk|0c16babb78ad3525f5824bfba93e4bc1
