@@ -27,6 +27,9 @@ lib/libsysenv_system.so
 # RIL
 # vendor/lib64/libmtk-ril.so:lib64/libmtk-ril.so
 
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk|431c87287029ce64484b632263debfeb
+
 # MTK-IMS
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
