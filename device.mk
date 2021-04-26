@@ -130,7 +130,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # WiFi
 PRODUCT_PACKAGES += \
-    WifiOverlay \
     TetheringConfigOverlay
 
 # Telephony Jars
